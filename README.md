@@ -32,6 +32,7 @@ Since there are necessary pull-up resistors for the RTC chip already on board, t
 
 
 ### PLC / Infra Red Remote System
+<img alt="Image of the PLC setup" src="images/IR PLC.jpg">
 The PLC/Infra Red (IR) Remote System consists of the PLCMega 328, an I2C LC1602 display, an IR Receiver module with and I2C bus interface, an external 5 VDC power supply for the IR Receiver (the 5 VDC could be supplied by the PLC), and an IR Remote. The choice of the IR Remote will dictate the coding of the IR Receive function.
 
 ### Purpose of the Project and Documentation
@@ -70,5 +71,21 @@ The intent was to create functions that implement in a similar manner, the ladde
 Two first order lag simulator functions are included to experiment with the PID Controller. The lags can be cascaded to simulate a second order system. The infra red (IR) receiver function allows interaction in real time with the On Delay timer, Off Delay timer, sequencer, and analog output. The IR receiver also allows starting and stopping scanning.
 
 Timing settings are displayed on the LCD1602. In addition, the On and Off delay timers can start and reset the timers via the IR remote.
+
+<img alt="Image of the IR Remote" src="images/IR_Remote.jpg">
+
+  * **Red Power Button** – tuns Scan On/Off
+  * **FUNC STOP** On Delay Start/Stop
+  * **Vol+** On Delay Increase Seconds
+  * **Vol-** On Delay Decrease Seconds
+  * **^** On Delay Increase Minutes
+  * **V** On Delay Decrease Minutes
+  * **ST/RPT** Off Delay Start/Stop
+  * **|>|>|** Off Delay Increase Seconds
+  * **|<|<|** Off Delay Decrease Seconds
+  * **|>||** Off Delay Increase Minutes
+  * **EQ** Off Delay Decrease Minutes
+  * **0** Analog Out Count Increase
+  * **9** Analog Out Count Decrease 
 
 The settings for all the functions can be set directly in the code rather than using the IR Remote. However, the IR Remote allows the settings to be changed at run time. As a DS1307 real time clock is used for timing, the On and Off Delay timer implementation does not require the delay (ms) function. That is the scan operates without delay. The On and Off Delay Timers can be set from 1 sec to 59 minutes and 59 seconds. If the PID controller is used there will be a necessary 20 msec delay due to the integration and differentiation required when implementing PID.
