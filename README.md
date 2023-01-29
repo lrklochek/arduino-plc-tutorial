@@ -68,7 +68,10 @@ The intent was to create functions that implement in a similar manner, the ladde
 * Sequencer
 * PID Controller
 
-Two first order lag simulator functions are included to experiment with the PID Controller. The lags can be cascaded to simulate a second order system. The infra red (IR) receiver function allows interaction in real time with the On Delay timer, Off Delay timer, sequencer, and analog output. The IR receiver also allows starting and stopping scanning.
+The PID controller output, controlled variable and set point are normalized 0 to 1.0. Inputting /Outputing will require mapping the normalized variables to the analog input/outputs.
+Two first order lag simulator functions are included to experiment with the PID Controller. The lags can be cascaded to simulate a second order system. The simulator process variables are nomalized 0 to 1.0.
+
+The infra red (IR) receiver function allows interaction in real time with the On Delay timer, Off Delay timer, sequencer, and analog output. The IR receiver also allows starting and stopping scanning.
 
 Timing settings are displayed on the LCD1602. In addition, the On and Off delay timers can start and reset the timers via the IR remote.
 
