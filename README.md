@@ -95,15 +95,25 @@ The settings for all the functions can be set directly in the code rather than u
 ### PLC Program Structure
 <img alt="PLC Program Structure Scaled" src="images/PLC Program Structure Scaled.jpg">
 
-##### Ladder Logic Representation Of PLC Functions Used
+### Ladder Logic Representation Of PLC Functions Used
 
+
+####      On Delay and Off Delay Timer
 <img alt="Timers" src="images/Timers Scaled.jpg">
+__________________________________________________________________________________________________________________________________________
 
-<img alt="Counters" src="images/Counters Scaled.jpg">
+####     Up Counter and Down Counter
+
+<img alt="Counters" src="images/Counters Scaled 3.jpg">
+__________________________________________________________________________________________________________________________________________
 
 <img alt="Boolean Logic" src="images/Boolean Logic Scaled.jpg">
+__________________________________________________________________________________________________________________________________________
 
+####   Sequencer
 <img alt="Sequencer" src="images/Sequencer Scaled.jpg">
+__________________________________________________________________________________________________________________________________________
 
+####   PID Controller
 <img alt="PID Controller" src="images/PID Function Scaled.jpg">
 
