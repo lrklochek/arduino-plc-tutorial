@@ -92,5 +92,4 @@ Timing settings are displayed on the LCD1602. In addition, the On and Off delay 
   * **9** Analog Out Count Decrease 
 
 The settings for all the functions can be set directly in the code rather than using the IR Remote. However, the IR Remote allows the settings to be changed at run time. As a DS1307 real time clock is used for timing, the On and Off Delay timer implementation does not require the delay (ms) function. That is the scan operates without delay. The On and Off Delay Timers can be set from 1 sec to 59 minutes and 59 seconds. If the PID controller is used there will be a necessary 20 msec delay due to the integration and differentiation required when implementing PID.
-### PLC Program Structure
-<img alt="Image of C Code Loop Function" src="images/PLC Program Structure Scaled.jpg">
+
