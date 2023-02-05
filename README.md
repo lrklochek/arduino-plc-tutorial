@@ -27,7 +27,9 @@ Analog inputs are protected against over voltage of max. 28V.
 The NANO’s I2C bus is used to connect to the on-board RTC and it can also be accessed through the 4-pin female header besides the analog inputs section.
 
 Since there are necessary pull-up resistors for the RTC chip already on board, the external IR Receiver that uses the I2C bus is connected without additional pullup resistors. The supply voltage for the PLC is 12V DC with a maximum current drawn of less than 500mA. Screw terminals fit wires 22-14 AWG (1.5mm max.) 
-
+### Source Code
+Four C source files are listed.
+There is a file for the PLC / Infra Red Remote System. In addition there are three smaller files with no IR  interface or LCD displays.  The smaller files run On Delay and Off Delay timers and are configured to include hours as well as minutes and seconds for timing purposes. I have also added a debouncing function for the digital inputs.
 
 
 
