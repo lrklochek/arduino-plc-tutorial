@@ -29,9 +29,15 @@ The NANO’s I2C bus is used to connect to the on-board RTC and it can also be a
 Since there are necessary pull-up resistors for the RTC chip already on board, the external IR Receiver that uses the I2C bus is connected without additional pullup resistors. The supply voltage for the PLC is 12V DC with a maximum current drawn of less than 500mA. Screw terminals fit wires 22-14 AWG (1.5mm max.) 
 ### Source Code
 Four C source files are listed.
-There is a file for the PLC / Infra Red Remote System. In addition there are three smaller files with no IR  interface or LCD displays.  The smaller files run On Delay and Off Delay timers and are configured to include hours as well as minutes and seconds for timing purposes. I have also added a debouncing function for the digital inputs.
-
-
+There is a file for the PLC / Infra Red Remote System. In addition there are three smaller files with no IR  interface or LCD displays.  The smaller files run On Delay and Off Delay timers and are configured to include hours as well as minutes and seconds for timing purposes. A debouncing function for the digital inputs has been added.
+#### PLC_2_IR.ino
+Source file for Infra Red Remote operation and display with i2CLCD1602. PLC functions can be selected by commenting or uncommenting functions in the looping code. These functions include On Delay timer, Off Delay timer, And/Or/Xor boolean logic, Sequencer, PID Controller, and 1st/2nd order simulator blocks.
+#### PLC_4_OffDelay_Timers.ino
+sSurce file for 6 Off Delay timers. Initiation of all timers is via a debounced Digital Input 3. No infra red operation or LCD display. Timers can be set in code from 1 second to 23 Hours 59 minutes and 59 seconds.
+#### PLC_4_OnDelay_Timers.ino
+Source file for 6 On Delay timers. Initiation of all timers is via a debounced Digital Input 3. No infra red operation or LCD display. Timers can be set in code from 1 second to 23 Hours 59 minutes and 59 seconds.
+#### PLC_4_On_Off_Timers.ino
+Source file for 2 On Delay and 2 Off Delay timers.No infra red operation or LCD display. Timers can be set in code from 1 second to 23 Hours 59 minutes and 59 seconds.
 
 ### PLC / Infra Red Remote System
 <img alt="Image of the PLC setup" src="images/IR PLC.jpg">
