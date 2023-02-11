@@ -38,6 +38,8 @@ sSurce file for 6 Off Delay timers. Initiation of all timers is via a debounced 
 Source file for 6 On Delay timers. Initiation of all timers is via a debounced Digital Input 3. No infra red operation or LCD display. Timers can be set in code from 1 second to 23 Hours 59 minutes and 59 seconds.
 #### PLC_4_On_Off_Timers.ino
 Source file for 2 On Delay and 2 Off Delay timers.No infra red operation or LCD display. Timers can be set in code from 1 second to 23 Hours 59 minutes and 59 seconds.
+#### Set_Time_Date_Real_Time_Clock.ino
+Source file to set the Real Time Clock. Need to do this before uploading 
 
 ### PLC / Infra Red Remote System
 <img alt="Image of the PLC setup" src="images/IR PLC.jpg">
