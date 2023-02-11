@@ -33,13 +33,15 @@ There is a file for the PLC / Infra Red Remote System. In addition there are thr
 #### PLC_2_IR.ino
 Source file for Infra Red Remote operation and display with i2CLCD1602. PLC functions can be selected by commenting or uncommenting functions in the looping code. These functions include On Delay timer, Off Delay timer, And/Or/Xor boolean logic, Sequencer, PID Controller, and 1st/2nd order simulator blocks.
 #### PLC_4_OffDelay_Timers.ino
-sSurce file for 6 Off Delay timers. Initiation of all timers is via a debounced Digital Input 3. No infra red operation or LCD display. Timers can be set in code from 1 second to 23 Hours 59 minutes and 59 seconds.
+Source file for 6 Off Delay timers. Initiation of all timers is via a debounced Digital Input 3. No infra red operation or LCD display. Timers can be set in code from 1 second to 23 Hours 59 minutes and 59 seconds.
 #### PLC_4_OnDelay_Timers.ino
 Source file for 6 On Delay timers. Initiation of all timers is via a debounced Digital Input 3. No infra red operation or LCD display. Timers can be set in code from 1 second to 23 Hours 59 minutes and 59 seconds.
 #### PLC_4_On_Off_Timers.ino
 Source file for 2 On Delay and 2 Off Delay timers.No infra red operation or LCD display. Timers can be set in code from 1 second to 23 Hours 59 minutes and 59 seconds.
 #### Set_Time_Date_Real_Time_Clock.ino
-Source file to set the Real Time Clock. Need to do this before uploading 
+Source file to set the Real Time Clock. Need to do this before uploading souce file for PLC_Date_Time.ino. 
+#### PLC_Date_Time.ino
+Source file for timers. Relays 1 to 5 can each be set to turn on and off at prescribed year, month, day, hour, minute. Relay 6 can turn on or off at any of the same times entered for relays 1 through 5. Real Time Clock is battery backed up and set by uploading souce file Set_Time_Date_Real_Time_Clock.ino first.
 
 ### PLC / Infra Red Remote System
 <img alt="Image of the PLC setup" src="images/IR PLC.jpg">
