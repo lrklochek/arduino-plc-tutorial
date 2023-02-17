@@ -162,6 +162,7 @@ This pattern will continue until September 25 at 10 hours and 15 minutes
   * etc
 * 9/25/10/15 Relay 6 OFF 
 __________________________________________________________________
-<img alt="plc-timer-operation.jpg" src="images/plc-timer-operation Scaled.jpg">
+<img alt="plc-timer-operation" src="images/plc-timer-operation Scaled.jpg">
 _________________________________________________________________
-<img alt="plc-timer-operation.jpg" src="images/plc-timer-operation Scaled.jpg">
+<img alt="timing-formula" src="images/timing-formula Scaled.jpg">
+
