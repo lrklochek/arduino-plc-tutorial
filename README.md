@@ -130,7 +130,7 @@ ________________________________________________________________________________
 <img alt="PID Controller" src="images/PID Function Scaled.jpg">
 
 ## PLC Timer
-# Source File 
+### Source File: PLC_Date_Time_ver_2.ino
 The 6 relays of the PLC Timer operate differently with respect to timing capabilities. However by performing logical operations such as ANDing and ORing the Relay 6 which has no inherent timing operation associated with it, can be made to incorporate all or any of the timing operations associated with Relays 1,2,3,4,or 5.
 
 The diagram on the next page describes the parameters that can be set to perform the various timing functions.
@@ -161,4 +161,4 @@ This pattern will continue until September 25 at 10 hours and 15 minutes
   * etc
   * etc
 * 9/25/10/15 Relay 6 OFF 
-
+<img alt="Timers" src="images/Timers Scaled.jpg">
