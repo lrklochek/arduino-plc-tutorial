@@ -28,8 +28,8 @@ The NANO’s I2C bus is used to connect to the on-board RTC and it can also be a
 
 Since there are necessary pull-up resistors for the RTC chip already on board, the external IR Receiver that uses the I2C bus is connected without additional pullup resistors. The supply voltage for the PLC is 12V DC with a maximum current drawn of less than 500mA. Screw terminals fit wires 22-14 AWG (1.5mm max.) 
 ### Source Code
-Four C source files are listed.
-There is a file for the PLC / Infra Red Remote System. In addition there are three smaller files with no IR  interface or LCD displays.  The smaller files run On Delay and Off Delay timers and are configured to include hours as well as minutes and seconds for timing purposes. A debouncing function for the digital inputs has been added. In addition a source file, created by ArduinoGetStarted.com, has been included to set the Real Time Clock for the file PLC_Date_Time.ino program, a year/month/day/hour/minute timer described below.
+Five C source files are listed.
+There is a file for the PLC / Infra Red Remote System. In addition there are three smaller files with no IR  interface or LCD displays and one file with LCD display only.  The smaller files run On Delay and Off Delay timers and are configured to include hours as well as minutes and seconds for timing purposes. A debouncing function for the digital inputs has been added. In addition a source file, created by ArduinoGetStarted.com, has been included to set the Real Time Clock for the file PLC_Date_Time.ino program, a year/month/day/hour/minute timer described below.
 #### PLC_2_IR.ino
 Source file for Infra Red Remote operation and display with i2CLCD1602. PLC functions can be selected by commenting or uncommenting functions in the looping code. These functions include On Delay timer, Off Delay timer, And/Or/Xor boolean logic, Sequencer, PID Controller, and 1st/2nd order simulator blocks.
 #### PLC_4_OffDelay_Timers.ino
@@ -42,6 +42,8 @@ Source file for 2 On Delay and 2 Off Delay timers.No infra red operation or LCD 
 Source file to set the Real Time Clock. Need to do this before uploading source file for PLC_Date_Time.ino. 
 #### PLC_Date_Time.ino
 Source file for timers. Relays 1 to 5 can each be set to turn on and off at prescribed year, month, day, hour, minute. Relay 6 can turn on or off at any of the same times entered for relays 1 through 5. Real Time Clock is battery backed up and set by uploading souce file Set_Time_Date_Real_Time_Clock.ino first.
+#### PLC_Date_Time_ver_2.ino
+This source file's Relay 1 uses a continous timing operation set in minutes, with an adjustable duty cycle. As for source file PLC_Date_Time.ino, Relays 2,3,4, and 5 can each be set to turn on and off at prescribed year, month, day, hour, minute. By performing logical operations such as ANDing and ORing, Relay 6, which has no inherent timing operation associated with it, can be made to incorporate all or any of the timing operations associated with Relays 1,2,3,4,or 5.
 
 ### PLC / Infra Red Remote System
 <img alt="Image of the PLC setup" src="images/IR PLC.jpg">
