@@ -129,3 +129,36 @@ ________________________________________________________________________________
 ####   PID Controller
 <img alt="PID Controller" src="images/PID Function Scaled.jpg">
 
+## PLC Timer
+# Source File 
+The 6 relays of the PLC Timer operate differently with respect to timing capabilities. However by performing logical operations such as ANDing and ORing the Relay 6 which has no inherent timing operation associated with it, can be made to incorporate all or any of the timing operations associated with Relays 1,2,3,4,or 5.
+
+The diagram on the next page describes the parameters that can be set to perform the various timing functions.
+
+The description below illustrates an example of the possibilities for setting the timer.
+
+* Set Relay 2: September 24 at 13 hours and 20 minutes to start, 
+* Set Relay 2: September 25 to 10 hours 15 minutes to end
+
+* Set Relay 1 to 20 minutes to start
+* Set Relay 1 to 30 minutes to stop.
+* Set Relay 1 delta 45 minutes 
+
+* Relay 6 Trigger By Logically ANDing Relay 1 and Relay 2 Triggers 
+* Result with have Relay 6 turning on at September 24, 13, hours and 20 minutes.
+* Relay 6 will stay on for 10 minutes, then stop.
+* Relay 6 will turn on again at September 24 14 hours and 5 minutes (65-60)
+* Relay 6 will turn off again at September 24 14 hours and 15 minutes (75-60)
+
+This pattern will continue until September 25 at 10 hours and 15 minutes
+
+* Start September 24, 13 hours, 20 minutes
+* 9/24/13/20 Relay 6 ON
+* 9/24/13/30 Relay 6 OFF
+* 9/24/14/05 Relay 6 ON
+* 9/24/14/15 Relay 6 OFF
+  * etc
+  * etc
+  * etc
+* 9/25/10/15 Relay 6 OFF 
+
