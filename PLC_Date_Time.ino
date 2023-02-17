@@ -44,14 +44,14 @@ int yearON1=2023;
 int monthON1=2;
 int dayON1=11;
 int hourON1=18;
-int minuteON1=42;
+int minuteON1=1;
 
 
 int yearOFF1=2023;
 int monthOFF1=2;
 int dayOFF1=11;
 int hourOFF1=18;
-int minuteOFF1=44;
+int minuteOFF1=30;
 
 
 //*****************Relay 2 Parameters*************************
@@ -60,29 +60,29 @@ int yearON2=2023;
 int monthON2=2;
 int dayON2=11;
 int hourON2=18;
-int minuteON2=2;
+int minuteON2=31;
 
 
 int yearOFF2=2023;
 int monthOFF2=2;
 int dayOFF2=11;
 int hourOFF2=18;
-int minuteOFF2=30;
+int minuteOFF2=59;
 
 //*****************Relay 3 Parameters*************************
 bool triggerON3;
 int yearON3=2023;
 int monthON3=2;
 int dayON3=11;
-int hourON3=18;
-int minuteON3=30;
+int hourON3=19;
+int minuteON3=1;
 
 
 int yearOFF3=2023;
 int monthOFF3=2;
 int dayOFF3=11;
 int hourOFF3=19;
-int minuteOFF3=1;
+int minuteOFF3=30;
 
 
 //*****************Relay 4 Parameters*************************
@@ -91,29 +91,29 @@ int yearON4=2023;
 int monthON4=2;
 int dayON4=11;
 int hourON4=19;
-int minuteON4=2;
+int minuteON4=31;
 
 
 int yearOFF4=2023;
 int monthOFF4=2;
 int dayOFF4=11;
 int hourOFF4=19;
-int minuteOFF4=30;
+int minuteOFF4=59;
 
 //*****************Relay 5 Parameters*************************
 bool triggerON5;
 int yearON5=2023;
 int monthON5=2;
 int dayON5=11;
-int hourON5=19;
-int minuteON5=31;
+int hourON5=20;
+int minuteON5=1;
 
 
 int yearOFF5=2023;
 int monthOFF5=2;
 int dayOFF5=11;
 int hourOFF5=20;
-int minuteOFF5=1;
+int minuteOFF5=30;
 void setup() 
 {
   lcd.init();
@@ -174,7 +174,7 @@ if(tmYearToCalendar(tm.Year)==YearON && tm.Month==MonthON && tm.Day==DayON && tm
      Serial.print("Trigger1ON ");
      Serial.println(*Trigger);    
   }
-  else if(tmYearToCalendar(tm.Year)==YearOFF && tm.Month==MonthOFF && tm.Day==DayOFF && tm.Hour==HourON && tm.Minute==MinuteOFF )
+  else if(tmYearToCalendar(tm.Year)==YearOFF && tm.Month==MonthOFF && tm.Day==DayOFF && tm.Hour==HourOFF && tm.Minute==MinuteOFF )
     {
     *Trigger=false;
     
@@ -199,7 +199,7 @@ if(tmYearToCalendar(tm.Year)==YearON && tm.Month==MonthON && tm.Day==DayON && tm
      Serial.print("Trigger2ON ");
      Serial.println(*Trigger);    
   }
-  else if(tmYearToCalendar(tm.Year)==YearOFF && tm.Month==MonthOFF && tm.Day==DayOFF && tm.Hour==HourON && tm.Minute==MinuteOFF )
+  else if(tmYearToCalendar(tm.Year)==YearOFF && tm.Month==MonthOFF && tm.Day==DayOFF && tm.Hour==HourOFF && tm.Minute==MinuteOFF )
     {
     *Trigger=false;
     
@@ -224,7 +224,7 @@ if(tmYearToCalendar(tm.Year)==YearON && tm.Month==MonthON && tm.Day==DayON && tm
      Serial.print("Trigger3ON ");
      Serial.println(*Trigger);    
   }
-  else if(tmYearToCalendar(tm.Year)==YearOFF && tm.Month==MonthOFF && tm.Day==DayOFF && tm.Hour==HourON && tm.Minute==MinuteOFF )
+  else if(tmYearToCalendar(tm.Year)==YearOFF && tm.Month==MonthOFF && tm.Day==DayOFF && tm.Hour==HourOFF && tm.Minute==MinuteOFF )
     {
     *Trigger=false;
     
@@ -249,7 +249,7 @@ if(tmYearToCalendar(tm.Year)==YearON && tm.Month==MonthON && tm.Day==DayON && tm
      Serial.print("Trigger4ON ");
      Serial.println(*Trigger);    
   }
-  else if(tmYearToCalendar(tm.Year)==YearOFF && tm.Month==MonthOFF && tm.Day==DayOFF && tm.Hour==HourON && tm.Minute==MinuteOFF)
+  else if(tmYearToCalendar(tm.Year)==YearOFF && tm.Month==MonthOFF && tm.Day==DayOFF && tm.Hour==HourOFF && tm.Minute==MinuteOFF)
     {
     *Trigger=false;
     
@@ -274,7 +274,7 @@ if(tmYearToCalendar(tm.Year)==YearON && tm.Month==MonthON && tm.Day==DayON && tm
      Serial.print("Trigger5ON ");
      Serial.println(*Trigger);    
   }
-  else if(tmYearToCalendar(tm.Year)==YearOFF && tm.Month==MonthOFF && tm.Day==DayOFF && tm.Hour==HourON && tm.Minute==MinuteOFF)
+  else if(tmYearToCalendar(tm.Year)==YearOFF && tm.Month==MonthOFF && tm.Day==DayOFF && tm.Hour==HourOFF && tm.Minute==MinuteOFF)
     {
     *Trigger=false;
     
