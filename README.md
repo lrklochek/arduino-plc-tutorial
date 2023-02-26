@@ -28,8 +28,8 @@ The NANO’s I2C bus is used to connect to the on-board RTC and it can also be a
 
 Since there are necessary pull-up resistors for the RTC chip already on board, the external IR Receiver that uses the I2C bus is connected without additional pullup resistors. The supply voltage for the PLC is 12V DC with a maximum current drawn of less than 500mA. Screw terminals fit wires 22-14 AWG (1.5mm max.) 
 ### Source Code
-Five C source files are listed.
-There is a file for the PLC / Infra Red Remote System. In addition there are three smaller files with no IR  interface or LCD displays and one file with LCD display only.  The smaller files run On Delay and Off Delay timers and are configured to include hours as well as minutes and seconds for timing purposes. A debouncing function for the digital inputs has been added. In addition a source file, created by ArduinoGetStarted.com, has been included to set the Real Time Clock for the file PLC_Date_Time.ino program, a year/month/day/hour/minute timer described below.
+Six C source files are listed.
+There are 2 files for the PLC / Infra Red Remote Systems. In addition there are three smaller files with no IR  interface or LCD displays and one file with LCD display only.  The smaller files run On Delay and Off Delay timers and are configured to include hours as well as minutes and seconds for timing purposes. A debouncing function for the digital inputs has been added. In addition a source file, created by ArduinoGetStarted.com, has been included to set the Real Time Clock for the file PLC_Date_Time.ino program, a year/month/day/hour/minute timer described below.
 #### PLC_2_IR.ino
 Source file for Infra Red Remote operation and display with i2CLCD1602. PLC functions can be selected by commenting or uncommenting functions in the looping code. These functions include On Delay timer, Off Delay timer, And/Or/Xor boolean logic, Sequencer, PID Controller, and 1st/2nd order simulator blocks.
 #### PLC_4_OffDelay_Timers.ino
@@ -44,12 +44,14 @@ Source file to set the Real Time Clock. Need to do this before uploading source 
 Source file for timers. Relays 1 to 5 can each be set to turn on and off at prescribed year, month, day, hour, minute. Relay 6 can turn on or off at any of the same times entered for relays 1 through 5. Real Time Clock is battery backed up and set by uploading souce file Set_Time_Date_Real_Time_Clock.ino first.
 #### PLC_Date_Time_ver_2.ino
 This source file's Relay 1 uses a continous timing operation set in minutes, with an adjustable duty cycle. As for source file PLC_Date_Time.ino, Relays 2,3,4, and 5 can each be set to turn on and off at prescribed year, month, day, hour, minute. By performing logical operations such as ANDing and ORing, Relay 6, which has no inherent timing operation associated with it, can be made to incorporate all or any of the timing operations associated with Relays 1,2,3,4,or 5.
-
-### PLC / Infra Red Remote System
+#### PLC_Date_Time_ver_4_IR.ino
+Source file for Infra Red Remote operation and display with i2CLCD1602.  The timing code used is similar to source file PLC_Date_Time_ver_2.ino. The difference is that Relays 2,3, and 4 can be set to turn on and off at prescribed hour and minutes only (no month or day operation can be set). Relays 5 and 6 are not timed but can be logically combined with Relays 1,2,3 and 4. Relay 1 is set to continuously run, set in minutes, with an adjustable duty cycle. The timing settings for Relays 1,2,3,and 4 can be set from the IR Remote and are displayed on the LCD interface.
+### PLC / Infra Red Remote System - Source File PLC_2_IR.ino
 <img alt="Image of the PLC setup" src="images/IR PLC.jpg">
 The PLC/Infra Red (IR) Remote System consists of the PLCMega 328, an I2C LC1602 display, an IR Receiver module with and I2C bus interface, an external 5 VDC power supply for the IR Receiver (the 5 VDC could be supplied by the PLC), and an IR Remote. The choice of the IR Remote will dictate the coding of the IR Receive function.
+There are 2 source files that use the IR Remote. 
 
-### Purpose of the Project and Documentation
+### Purpose of the Projects and Documentation
 The project could be adapted for a variety of academic lab experiences such as electrical, computer, and mechatronic engineering, as well as computer technician/technology training. The intent of the project is to develop the following skills:
 * C Programming
 * Industrial automation
@@ -131,7 +133,7 @@ ________________________________________________________________________________
 ####   PID Controller
 <img alt="PID Controller" src="images/PID Function Scaled.jpg">
 
-## PLC Timer
+## PLC Star/Stop Timers
 ### Source File: PLC_Date_Time_ver_2.ino
 The 6 relays of the PLC Timer operate differently with respect to timing capabilities. However by performing logical operations such as ANDing and ORing the Relay 6 which has no inherent timing operation associated with it, can be made to incorporate all or any of the timing operations associated with Relays 1,2,3,4,or 5.
 
@@ -168,12 +170,14 @@ ________________________________________________________________________________
 ___________________________________________________________________________________________________________________
 
 <img alt="timing-formula" src="images/timing-formula Scaled 3.jpg">
-# PLC Timer- Source File: PLC_Date_Time_ver_4_IR.ino
+
+# PLC Start/Stop Timer2 with IR Remote
+Source File: PLC_Date_Time_ver_4_IR.ino
 The timer settings can be set via the IR Remote.
 
-The hardware and wired connections are identical to that shown for the PLC/ Infra Red Remote System above.
+The hardware and wired connections are identical to that shown for the PLC/ Infra Red Remote System for source file PLC_2_IR.ino.
 
-The Relay and timer settings are similar to that shown for the “PLC Timer- Source File: PLC_Date_Time_ver_2.ino”. That is:
+The Relay and timer settings are similar to that shown for the “PLC Timer- Source File: PLC_Date_Time_ver_2.ino”. That is shown below:
 <img alt="Timing interval Ver 4 IR" src="images/Timing interval Ver 4 IR Scaled.jpg">
 __________________________________________________________________________________________________________________
 <img alt="Image of the IR Remote" src="images/IR_Remote.jpg"> 
