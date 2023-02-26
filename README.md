@@ -180,6 +180,8 @@ The hardware and wired connections are identical to that shown for the PLC/ Infr
 The Relay and timer settings are similar to that shown for the “PLC Timer- Source File: PLC_Date_Time_ver_2.ino”. That is shown below:
 <img alt="Timing interval Ver 4 IR" src="images/Timing interval Ver 4 IR Scaled.jpg">
 __________________________________________________________________________________________________________________
+The Start/Stop timer settings can be set and reset via the IR remote and displayed on the LCD Display
+
 <img alt="Image of the IR Remote" src="images/IR_Remote.jpg"> 
 
 * 	**Red Power Button** – tuns Scan On/Off
