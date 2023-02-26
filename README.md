@@ -171,12 +171,12 @@ ________________________________________________________________________________
 <img alt="timing-formula" src="images/timing-formula Scaled 3.jpg">
 
 # PLC Timer- Source File: PLC_Date_Time_ver_4_IR.ino
-The timer settings can be set via the IR Remote. 
+The timer settings can be set via the IR Remote.
+
 The hardware and wired connections are identical to that shown for the PLC/ Infra Red Remote System above.
 
 The Relay and timer settings are similar to that shown for the “PLC Timer- Source File: PLC_Date_Time_ver_2.ino”. That is:
- 
-
+<img alt="Timing interval Ver 4 IR" src="images/Timing interval Ver 4 IR Scaled.jpg">
 
  
 •	Red Power Button – tuns Scan On/Off
