@@ -133,7 +133,7 @@ ________________________________________________________________________________
 ####   PID Controller
 <img alt="PID Controller" src="images/PID Function Scaled.jpg">
 
-## PLC Star/Stop Timers
+## PLC Start/Stop Timers
 ### Source File: PLC_Date_Time_ver_2.ino
 The 6 relays of the PLC Timer operate differently with respect to timing capabilities. However by performing logical operations such as ANDing and ORing the Relay 6 which has no inherent timing operation associated with it, can be made to incorporate all or any of the timing operations associated with Relays 1,2,3,4,or 5.
 
